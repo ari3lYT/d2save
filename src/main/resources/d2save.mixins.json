@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "ru.d2omg.d2save.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["ServerSaveMixin", "PlayerSaveMixin", "LevelSaveMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

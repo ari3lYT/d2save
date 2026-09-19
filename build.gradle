@@ -1,0 +1,32 @@
+plugins { id 'net.fabricmc.fabric-loom-remap' version '1.14.10' }
+group = 'ru.d2omg'
+version = '0.1.1'
+base { archivesName = 'd2save' }
+repositories { mavenCentral() }
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.11'
+    mappings 'net.fabricmc:yarn:1.21.11+build.5:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.18.4'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.141.3+1.21.11'
+    testImplementation platform('org.junit:junit-bom:5.13.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+    withSourcesJar()
+}
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+test { useJUnitPlatform() }
+fabricApi.configureTests {
+    createSourceSet = true
+    modId = 'd2save-test'
+    enableClientGameTests = true
+    enableGameTests = false
+    username = 'LoerVoid'
+}
+loom {
+    runs {
+        clientGameTest { vmArg '-Dfabric.client.gametest.disableNetworkSynchronizer=true' }
+    }
+}

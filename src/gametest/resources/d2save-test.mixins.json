@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "ru.d2omg.d2save.testmixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["TestServerAccess"],
+  "injectors": { "defaultRequire": 1 }
+}

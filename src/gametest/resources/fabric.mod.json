@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "d2save-test",
+  "version": "1.0.0",
+  "name": "D2Save QA",
+  "environment": "*",
+  "entrypoints": { "fabric-client-gametest": ["ru.d2omg.d2save.SaveClientTest"] },
+  "mixins": ["d2save-test.mixins.json"]
+}

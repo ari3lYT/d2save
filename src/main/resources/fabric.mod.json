@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "d2save",
+  "version": "0.1.1",
+  "name": "D2Save",
+  "description": "Ordered background player and level metadata writes during vanilla autosaves.",
+  "environment": "*",
+  "entrypoints": { "main": ["ru.d2omg.d2save.D2Save"] },
+  "mixins": ["d2save.mixins.json"],
+  "depends": { "fabricloader": ">=0.18.4", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}
