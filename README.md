@@ -1,5 +1,7 @@
 # D2Save
 
+**English** · [Русский](README.ru.md)
+
 D2Save is a server-side Fabric mod that moves vanilla player-data and level-metadata disk writes off the Minecraft tick thread during autosaves.
 
 It was built after profiling multi-second autosave stalls on storage with high `fsync` latency. Clients do not need the mod, and it does not change chunks, autosave frequency, gameplay, commands, permissions, recipes, or the on-disk NBT format.
